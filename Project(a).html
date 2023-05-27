@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Formpage</title>
+    <link rel="stylesheet" href="Project.css">
+    <script src="Project.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function SubForm ()
+        {
+            $.ajax
+            ({
+                url:'https://api.apispreadsheets.com/data/fifsFCiukltjW0Id/',
+                type:'post',
+                data:$("#myform").serializeArray(),
+                success: function()
+                {
+                    alert("Thank You!! Your details has been successfully submitted :)")
+                },
+                error: function()
+                {
+                    alert("There was an error :(")
+                }
+            });
+        }
+        </script>
+</head>
+
+<body class="bg">
+    <div style="display: grid; grid-template-columns: 1fr 9fr; background-color: #363636; background-size: 1000vh;">
+        <img src="sport-sports-png-transparent-images-30.png" style="height: 100px; width: 100px;">
+        <h1>Sports Academy</h1>
+    </div>
+    <div id="navbar">
+        <div style="display: grid; grid-column-start: 1; grid-column-end: 2;">
+            <div style="display: inline-flex; padding-left: 40px;">
+                <div><button onclick="window.open('Project.html', '_parent')" class="a">Home</button></div>
+                <div class="dropdown"><button class="a">Sports Facilities ﹀</button>
+                    <div class="dropdown-content" style="width: 150px;">
+                        <a> Cricket</a>
+                        <a> Badminton</a>
+                        <a> Football</a>
+                        <a> Basketball</a>
+                        <a> Boxing</a>
+                        <a> Swimming</a>
+                        <a> Table Tennis</a>
+                        <a> Lawn Tennis</a>
+                        <a> Gymnastics</a>
+                        <a> Gym</a>
+                        <a> Skating</a>
+                        <a> Vollyball</a>
+                        <a> Squash</a>
+                        <a> Ball Pool</a>
+                        <a> Running Track</a>
+                    </div>
+                </div>
+                <div class="dropdown"><button class="a">Faculty ﹀</button>
+                    <div class="dropdown-content">
+                        <a> 
+                            Dr. Shyam Sundar Rath <br>
+                            [Dean (Students' Welfare),
+                            Associate Professor,
+                            HOD]
+                        </a>
+                        <a> 
+                            Mr. Ravi K Shankar <br> 
+                            [Asst. Professor]
+                        </a>
+                        <a>
+                            Ms. Manjinder Jyoti <br>
+                            [Asst. Professor]
+                        </a>
+                        <a>
+                            Mr. M. Rakeshsunder Singh <br>
+                            [Asst. Professor]
+                        </a>
+                        <a>
+                            Mr. Yendrembam Biondi Meitei <br>
+                            [Asst. Professor]
+                        </a>
+                        <a>
+                            Mr. PraloyKanti Sarkar <br>
+                            [Asst. Professor]
+                        </a>
+                        <a>
+                            Mr. Anshuman Bal <br>
+                            [Asst. Professor]
+                        </a>
+                    </div>
+                </div>
+                <div><button onclick="window.open('Project(a).html', '_parent')" class="a" style="margin-left: 20px;">Admission</button></div>
+                <div class="dropdown"><button class="a">Tournaments ﹀</button>
+                    <div class="dropdown-content">
+                        <a> Inter-academy tournament</a>
+                        <a> Intra-academy tournament</a>
+                        <a> District tournament</a>
+                        <a> State tournament</a>
+                        <a> National tournament</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: grid; grid-column-start: 2; grid-column-end: 3;">
+            <form action="/" method="GET" class="form">
+                <input type="search" placeholder="Search                            |" class="search-field" id="Search"/>
+                <button type="submit" class="search-button" onclick="find()">
+                  <img src="search.png">
+                </button>
+            </form>
+        </div>
+    </div><br><br><br>
+    <center>
+        <div style="border: 2px solid black; width: 500px; height: 500px; padding: 20px; text-align: left; margin-top: 20px; overflow-y: scroll; background-color: white;">
+            <form style="margin-left: 20px; font-size: xx-large;" id="myform">
+                <div><label for="f1">Name: </label><input type="text" id="f1" name="Username" placeholder="Enter your name"></div><br>
+                <div><label for="f2">Email-Id: </label><input type="email" id="f2" name="Email-id" placeholder="Enter your email-id"></div><br>
+                <div><label for="f3">Phone Number: </label><input type="number" id="f3" name="Phone" placeholder="Enter your phone number"></div><br>
+                <div><label for="f4">Date of Birth: </label><input type="date" id="f4" name="DOB"></div><br>
+                <div id="sport"><label for="f5">Sports Activities: </label>
+                    <div><input type="checkbox" name="action"value="Badminton"><label>Badminton</label></div>
+                    <div><input type="checkbox" name="action" value="Basketball"><label>Basketball </label></div>
+                    <div><input type="checkbox" name="action"value="Cricket"><label>Cricket</label></div>
+                    <div><input type="checkbox" name="action" value="Football"><label>Football</label></div>
+                    <div><input type="checkbox" name="action"value="Boxing"><label>Boxing</label></div>
+                    <div><input type="checkbox" name="action" value="Swimming"><label>Swimmming</label></div>
+                    <div><input type="checkbox" name="action"value="Table Tennis"><label>Table Tennis</label></div>
+                    <div><input type="checkbox" name="action" value="Lawn Tennis"><label>Lawn Tennis</label></div>
+                    <div><input type="checkbox" name="action"value="Gymnastics"><label>Gymnastics</label></div>
+                    <div><input type="checkbox" name="action" value="Gym"><label>Gym</label></div>
+                    <div><input type="checkbox" name="action"value="Skating"><label>Skating</label></div>
+                    <div><input type="checkbox" name="action" value="Vollyball"><label>Vollyball</label></div>
+                    <div><input type="checkbox" name="action"value="Squash"><label>Squash</label></div>
+                    <div><input type="checkbox" name="action" value="Ball Pool"><label>Ball Pool</label></div>
+                </div><br>
+                <div><label for="f8">Gender: </label><br>
+                    <input type="radio" id="f8" name="Gender" value="m"><label for="f8">Male</label><br>
+                    <input type="radio" id="f8" name="Gender" value="f"><label for="f9">Female</label><br>
+                </div><br>
+                <div><label for="f10">State: </label>
+                    <select name="State" id="f10">
+                        <option selected hidden value="">Select Your State</option>
+                        <option>Andhra Pradesh(Amaravati)</option>
+                        <option>Arunachal Pradesh(Itanagar)</option>
+                        <option>Assam(Dispur)</option>
+                        <option>Bihar(Patna)</option>
+                        <option>Chhattisgarh(Raipur)</option>
+                        <option>Goa(Panaji)</option>
+                        <option>Gujarat(Gandhinagar)</option>
+                        <option>Haryana(Chandigarh)</option>
+                        <option>Himachal Pradesh(Shimla)</option>
+                        <option>Jharkhand(Ranchi)</option>
+                        <option>Karnataka(Bengaluru)</option>
+                        <option>Kerala(Thiruvananthapuram)</option>
+                        <option>Madhya Pradesh(Bhopal)</option>
+                        <option>Maharashtra(Mumbai)</option>
+                        <option>Manipur(Imphal)</option>
+                        <option>Meghalaya(Shillong)</option>
+                        <option>Mizoram(Aizawl)</option>
+                        <option>Nagaland(Kohima)</option>
+                        <option>Odisha(Bhubaneswar)</option>
+                        <option>Punjab(Chandigarh)</option>
+                        <option>Rajasthan(Jaipur)</option>
+                        <option>Sikkim(Gangtok)</option>
+                        <option>Tamil Nadu(Chennai)</option>
+                        <option>Telangana(Hyderabad)</option>
+                        <option>Tripura(Agartala)</option>
+                        <option>Uttar Pradesh(Lucknow)</option>
+                        <option>Uttarakhand(Dehradun)</option>
+                        <option>West Bengal(Kolkata)</option>
+                        <option>Andaman and Nicobar Islands(Port Blair)</option>
+                        <option>Chandigarh(Chandigarh)</option>
+                        <option>Dadra & Nagar Haveli and Daman & Diu(Daman)</option>
+                        <option>Delhi(New Delhi)</option>
+                        <option>Jammu and Kashmir(Srinagar)</option>
+                        <option>Lakshadweep(Kavaratti)</option>
+                        <option>Puducherry(Pondicherry)</option>
+                        <option>Ladakh(Leh)</option>
+                    </select>
+                </div><br>
+                <div>
+                    <button type="button" style="font-size: larger; border-radius: 10px; background-color: black; color: white;" onclick="SubForm()">Submit</button>
+                    <button type="reset" style="font-size: larger; border-radius: 10px; background-color: black; color: white;">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </center>
+    <script type="text/javascript">
+        window.onbeforeunload = function() 
+        {
+            var text = "";
+            return text;
+        }
+    </script>
+</body>
+</html>
